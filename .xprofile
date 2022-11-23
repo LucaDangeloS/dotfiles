@@ -1,0 +1,2 @@
+setxkbmap -layout es
+xset r rate 175 40
