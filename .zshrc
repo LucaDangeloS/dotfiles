@@ -36,6 +36,7 @@ alias c="code ./; exit"
 alias intellij="intellij-idea-ultimate-edition ./ &; disown;"
 alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
 alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
+alias pull='git add .; git stash; git pull; git stash pop'
 
 #alias nano="nano -m"
 
@@ -102,6 +103,7 @@ alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.
 plugins=(
 	git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
