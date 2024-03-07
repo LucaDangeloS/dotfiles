@@ -22,7 +22,7 @@ HISTCONTROL=ignoreboth
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-alias ls='ls --color=auto'
+alias ls='ls -lt --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias bcat='bat'
@@ -37,6 +37,8 @@ alias intellij="intellij-idea-ultimate-edition ./ &; disown;"
 alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
 alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
 alias pull='git add .; git stash; git pull; git stash pop'
+
+xset r rate 200 25
 
 #alias nano="nano -m"
 
