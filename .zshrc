@@ -38,8 +38,6 @@ alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
 alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
 alias pull='git add .; git stash; git pull; git stash pop'
 
-xset r rate 200 25
-
 #alias nano="nano -m"
 
 # Set list of themes to pick from when loading at random
