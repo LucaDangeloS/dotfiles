@@ -119,18 +119,19 @@
 }
 
 #workspaces * {
-  font-size: 0px;
+  font-size: 10px;
+  color: black;
 }
 
 #workspaces button {
   background-color: @surface3;
   color: @mauve;
   border-radius: 100%;
-  min-height: 14px;
-  min-width: 14px;
-  margin: 5px 8px;
+  min-height: 18px;
+  min-width: 18px;
+  margin: 2px 4px;
   padding: 0px;
-  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
+  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0);*/
   transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
   box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }

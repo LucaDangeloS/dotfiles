@@ -34,9 +34,10 @@
          "all-outputs": true,
          "warp-on-scroll": true,
          "active-only": false,
-         "format-icons": {
-            "active": "",
-            "default": ""
+        "format": "{name}", 
+	"format-icons": {
+            "active": "",
+            "default": ""
         },
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
