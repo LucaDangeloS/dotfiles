@@ -37,6 +37,7 @@ alias intellij="intellij-idea-ultimate-edition ./ &; disown;"
 alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
 alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
 alias pull='git add .; git stash; git pull; git stash pop'
+alias lsl="ls -lt"
 
 #alias nano="nano -m"
 
@@ -137,21 +138,6 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-#Java
-export JAVA_HOME=$HOME/UDC/ISD/software/jdk-17.0.5+8
-PATH=$JAVA_HOME/bin:$PATH
-
-# Maven
-MAVEN_HOME=$HOME/UDC/ISD/software/apache-maven-3.8.6
-PATH=$MAVEN_HOME/bin:$PATH
-export MAVEN_OPTS="-Xms512m -Xmx1024m"
-
-# MySQL.
-MYSQL_HOME=/usr/local/mysql
-PATH=$MYSQL_HOME/bin:$PATH
-. "$HOME/.cargo/env"
-
 
 fpath=(/home/luca/.gtheme/completions $fpath)
 autoload -Uz compinit && compinit
