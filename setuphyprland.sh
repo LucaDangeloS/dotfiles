@@ -1,4 +1,4 @@
-yay -S hyprland-git dunst xdg-desktop-portal-hyprland polkit-kde-agent rofi-lbonn-wayland-git waybar hyprlock-git hyprpicker-git grimblast cliphist
+yay -S hyprland-git dunst xdg-desktop-portal-hyprland polkit-kde-agent rofi-lbonn-wayland-git waybar hyprlock-git hyprpicker-git grimblast cliphist swaylock-effects-git pokemon-colorscripts-git hypridle
 sudo pacman -S hyprpaper
 
 git clone https://github.com/lr-tech/rofi-themes-collection.git

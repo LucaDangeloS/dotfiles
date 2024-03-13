@@ -19,4 +19,5 @@ swaylock \
 --line-color 313244 \
 --inside-color 00161925 \
 --separator-color 00000000 \
---fade-in 0.2 &
+--fade-in 0.2 \
+-f && hyprctl dispatch dpms off
