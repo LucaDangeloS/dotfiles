@@ -11,35 +11,10 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME=$HOME/.config
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HISTCONTROL=ignoreboth
-
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-alias ls='ls -lt --color=auto'
-alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias bcat='bat'
-alias r='ranger'
-alias untar='tar -xvzf'
-alias indexfiles='java -cp testlucene8_1_1-0.0.1-SNAPSHOT-jar-with-dependencies.jar simpledemo.IndexFiles'
-alias pdf='zathura --fork'
-alias epdf='evince'
-alias st='git status'
-alias c="code ./; exit"
-alias intellij="intellij-idea-ultimate-edition ./ &; disown;"
-alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
-alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
-alias pull='git add .; git stash; git pull; git stash pop'
-alias lsl="ls -lt"
-
-#alias nano="nano -m"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -93,24 +68,12 @@ alias lsl="ls -lt"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
 	zsh-autosuggestions
-	zsh-syntax-highlighting
+	fast-syntax-highlighting
 )
-
 source $ZSH/oh-my-zsh.sh
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -125,26 +88,32 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-fpath=(/home/luca/.gtheme/completions $fpath)
 autoload -Uz compinit && compinit
-export PATH=$PATH:/home/luca/.spicetify
 
-# opam configuration
-[[ ! -r /home/luca/.opam/opam-init/init.zsh ]] || source /home/luca/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-
+#export PATH=$PATH:/home/XXX/.spicetify
 export BROWSER="/usr/bin/firefox"
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+alias ls='ls -lt --color=auto'
+alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
+alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias bcat='bat'
+alias r='ranger'
+alias untar='tar -xvzf'
+alias indexfiles='java -cp testlucene8_1_1-0.0.1-SNAPSHOT-jar-with-dependencies.jar simpledemo.IndexFiles'
+alias pdf='zathura --fork'
+alias epdf='evince'
+alias st='git status'
+alias c="code ./; exit"
+alias intellij="intellij-idea-ultimate-edition ./ &; disown;"
+alias intellij-community="/usr/share/idea/bin/idea.sh ./ &; disown;"
+alias yolo='git add .; git commit -m "$(curl -s https://whatthecommit.com/index.txt)"; git push'
+alias pull='git add .; git stash; git pull; git stash pop'
+alias lsl="ls -lt"
+#alias nano="nano -m"
